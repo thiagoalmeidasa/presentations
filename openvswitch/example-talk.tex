@@ -1,53 +1,34 @@
 \documentclass[12pt]{beamer}
 
 \usetheme{Oxygen}
-\usepackage{thumbpdf}
-\usepackage{wasysym}
-\usepackage{ucs}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
 \usepackage[utf8]{inputenc}
-\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{thumbpdf}
+\usepackage{ucs}
 \usepackage{verbatim}
+\usepackage{wasysym}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
 
 \pdfinfo
 {
-  /Title       (Dr. LaTeX Beamer)
-  /Creator     (TeX)
-  /Author      (Konqi Konqueror)
+  /Title       (Open vSwitch)
+  /Creator     (Willian Paixao)
+  /Author      (Willian Paixao)
 }
 
 
-\title{Dr. LaTeX Beamer}
-\subtitle{How I Learned to Stop Worrying and Love the Slide}
-\author{Konqi Konqueror}
-%\date{September 6th 2006}
+\graphicspath{{img/}}
+
+\title{\texttt{Open vSwitch}}
+\subtitle{Um switch virtual livre}
+\author{Willian Paixao \\ \href{mailto:willian@ufpa.br}{willian@ufpa.br}}
+\date{\today}
 
 \begin{document}
 
 \frame{\titlepage}
-
-\section*{}
-\begin{frame}
-  \frametitle{Outline}
-  \tableofcontents[section=1,hidesubsections]
-\end{frame}
-
-\AtBeginSection[]
-{
-  \frame<handout:0>
-  {
-    \frametitle{Outline}
-    \tableofcontents[currentsection,hideallsubsections]
-  }
-}
-
-\AtBeginSubsection[]
-{
-  \frame<handout:0>
-  {
-    \frametitle{Outline}
-    \tableofcontents[sectionstyle=show/hide,subsectionstyle=show/shaded/hide]
-  }
-}
 
 \newcommand<>{\highlighton}[1]{%
   \alt#2{\structure{#1}}{{#1}}
@@ -56,83 +37,72 @@
 \newcommand{\icon}[1]{\pgfimage[height=1em]{#1}}
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% Content starts here %%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
-\section{Introduction}
+\section{Introdução}
 
 \begin{frame}
-  \frametitle{Prerequisites \& Goals}
-  \framesubtitle{Knowledge is a brick wall that you raise line by line forever}
-  \begin{block}{LaTeX}
+  \frametitle{Introdução}
+  \framesubtitle{O que é?}
+  \begin{block}{Definição}
   \begin{itemize}
-    \item Obviously some basic LaTeX knowledge is necessary
-    \item Some more features will be provided here
-  \end{itemize}
-  \end{block}
-
-  \begin{block}{Beamer}
-  \begin{itemize}
-    \item You'll learn them by looking at this presentation source
-  \end{itemize}
-  \end{block}
-
-  \begin{block}{Goal}
-  \begin{itemize}
-    \item Learn how to make well structured slides
-    \item Using a beautiful theme (congrats to the Oxygen team!)
-    \item Take over the world
-    \item Relax...
+    \pause
+    \item Switch
+    \pause
+    \item Virtual
+    \pause
+    \item Livre
   \end{itemize}
   \end{block}
 \end{frame}
 
-\section{Basic structuring}
+\section{Funcionalidades}
 \begin{frame}
-  \frametitle{Sections, Frames and Blocks}
-  \framesubtitle{Put everything into boxes}
-
-  The current section is "Basic structuring". And the current frame
-  is what you have on the screen right now.
-
-  \begin{block}{A beautiful block}
-  A block has a title, and some content. You can put in a block
-  almost everything you want that is provided by LaTeX. For example
-  math works as usual:
-    \begin{equation}
-    \sum_{i=1}^n i = \frac{n \times (n+1)}{2}
-    \end{equation}
+  \frametitle{Funcionalidades}
+  \framesubtitle{O que faz?}
+  \begin{block}{Protocolos suportados}
+  \begin{itemize}
+    \pause
+    \item Bidge
+    \pause
+    \item VLAN
+    \pause
+    \item QoS
+    \pause
+    \item NIC Bounding
+    \pause
+    \item BFD e 802.1ag
+  \end{itemize}
   \end{block}
+\end{frame}
 
-  Also works outside a block:
-  \begin{equation}
-  \sum_{i=1}^n i^2 = \frac{n \times (n+1) \times (2n+1)}{6}
-  \end{equation}
+\section{Exemplos}
+\section{Cenário 1}
+\begin{frame}
+  \frametitle{Cenário 1}
+  \framesubtitle{Dois hosts, quatro VMs}
+  \begin{block}{Configuração da rede}
+  \begin{itemize}
+    \pause
+    \item Duas sub redes
+    \pause
+    \item Dois hosts
+    \pause
+    \item Quatro máquinas virtuais
+  \end{itemize}
+  \end{block}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Different type of blocks}
-  \framesubtitle{Weeeee! Colors!!}
-  \begin{block}{Standard block}
-  \begin{itemize}
-    \item A standard block, used for grouping
-    \item Obviously can contain itemizes too...
-    \begin{itemize}
-      \item And nested itemizes...
-      \item of course!
-    \end{itemize}
-  \end{itemize}
-  \end{block}
-  \begin{alertblock}{Alert block}
-  WARNING: Something very important inside this block!
-  \end{alertblock}
-  \begin{example}
-  Note that examples are displayed as a special block...
-  \end{example}
+  \frametitle{Cenário 1}
+  \framesubtitle{Dois hosts, quatro VMs}
+  \begin{figure}[t]
+      \includegraphics[width=.75\textwidth]{2host-4vm}
+      \centering
+  \end{figure}
 \end{frame}
 
 \section{Fancy features}
