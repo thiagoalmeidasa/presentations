@@ -22,33 +22,33 @@
 
 \begin{document}
 \author{Thiago Almeida
-		\href{mailto:thiagoalmeidasa@gmail.com}{thiagoalmeidasa@gmail.com}}
+    	\href{mailto:thiagoalmeidasa@gmail.com}{thiagoalmeidasa@gmail.com}}
 
 \frame{\titlepage}
 
-\section*{}
-\begin{frame}
-  \frametitle{Outline}
-  \tableofcontents[section=1,hidesubsections]
-\end{frame}
-
-\AtBeginSection[]
-{
-  \frame<handout:0>
-  {
-    \frametitle{Outline}
-    \tableofcontents[currentsection,hideallsubsections]
-  }
-}
-
-\AtBeginSubsection[]
-{
-  \frame<handout:0>
-  {
-    \frametitle{Outline}
-    \tableofcontents[sectionstyle=show/hide,subsectionstyle=show/shaded/hide]
-  }
-}
+%\section*{}
+%\begin{frame}
+%  \frametitle{Outline}
+%  \tableofcontents[section=1,hidesubsections]
+%\end{frame}
+%
+%\AtBeginSection[]
+%{
+%  \frame<handout:0>
+%  {
+%    \frametitle{Outline}
+%    \tableofcontents[currentsection,hideallsubsections]
+%  }
+%}
+%
+%\AtBeginSubsection[]
+%{
+%  \frame<handout:0>
+%  {
+%    \frametitle{Outline}
+%    \tableofcontents[sectionstyle=show/hide,subsectionstyle=show/shaded/hide]
+%  }
+%}
 
 \newcommand<>{\highlighton}[1]{%
   \alt#2{\structure{#1}}{{#1}}
@@ -64,35 +64,38 @@
 
 
 
-\section{Introduction}
+\section{Apresentação}
 
 \begin{frame}
-  \frametitle{Prerequisites \& Goals}
+  \frametitle{Pré requisitos e Objetivos}
   \framesubtitle{Knowledge is a brick wall that you raise line by line forever}
-  \begin{block}{LaTeX}
+  \begin{block}{Docker}
   \begin{itemize}
-    \item Obviously some basic LaTeX knowledge is necessary
-    \item Some more features will be provided here
+		\item Nenhuma experiência anterior com \emph{Docker} será necessária.
   \end{itemize}
   \end{block}
 
-  \begin{block}{Beamer}
+	\begin{block}{\emph{LINUX}}
   \begin{itemize}
-    \item You'll learn them by looking at this presentation source
+		\item Familiariadade com alguma distribuição \emph{Linux}
+		\item Familiariadade com terminal e linhas de comando.
   \end{itemize}
   \end{block}
 
-  \begin{block}{Goal}
+  \begin{block}{Objetivos}
   \begin{itemize}
-    \item Learn how to make well structured slides
-    \item Using a beautiful theme (congrats to the Oxygen team!)
-    \item Take over the world
-    \item Relax...
+		\item Entender a a estrutura da plataforma \emph{Docker}.
+		\item Conhecer os componentes da plataforma \emph{Docker}.
+						\begin{itemize}
+										\item Imagens
+										\item Containeres
+										\item Repositórios
+						\end{itemize}
   \end{itemize}
   \end{block}
 \end{frame}
 
-\section{Basic structuring}
+\section{}
 \begin{frame}
   \frametitle{Sections, Frames and Blocks}
   \framesubtitle{Put everything into boxes}
