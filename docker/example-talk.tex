@@ -58,6 +58,11 @@
 
 
 
+\newcommand{\putlink}[1]{%
+   \pgfsetlinewidth{1.4pt}%
+   \pgfsetendarrow{\pgfarrowtriangle{4pt}}%
+   \pgfline{\pgfxy(1,1)}{\pgfxy(#1,1)}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% Content starts here %%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -68,7 +73,6 @@
 
 \begin{frame}
   \frametitle{Pré requisitos e Objetivos}
-  \framesubtitle{Knowledge is a brick wall that you raise line by line forever}
   \begin{block}{Docker}
   \begin{itemize}
 		\item Nenhuma experiência anterior com \emph{Docker} será necessária.
@@ -88,117 +92,66 @@
 		\item Conhecer os componentes da plataforma \emph{Docker}.
 						\begin{itemize}
 										\item Imagens
-										\item Containeres
+										\item Contêineres
 										\item Repositórios
 						\end{itemize}
   \end{itemize}
   \end{block}
 \end{frame}
 
-\section{}
+\section{Introdução}
 \begin{frame}
-  \frametitle{Sections, Frames and Blocks}
-  \framesubtitle{Put everything into boxes}
-
-  The current section is "Basic structuring". And the current frame
-  is what you have on the screen right now.
-
-  \begin{block}{A beautiful block}
-  A block has a title, and some content. You can put in a block
-  almost everything you want that is provided by LaTeX. For example
-  math works as usual:
-    \begin{equation}
-    \sum_{i=1}^n i = \frac{n \times (n+1)}{2}
-    \end{equation}
+  \frametitle{Agenda}
+  \framesubtitle{Tópicos abordados}
+  \begin{block}{Principais pontos}
+					\begin{itemize}
+									\item <2->O que é Docker?
+									\item <3->Contêineres vs Máquinas Virituais
+									\item <4->Visualização sobre a plataforma Docker
+													\begin{itemize}
+																	\item <5->Docker Engine
+																	\item <6->Imagens
+																	\item <7->Contêineres
+																	\item <8->Registro
+																	\item <9->Repositórios
+																	\item <10->Docker Hub
+																	\item <11->Ferramentas de orquestração Docker
+													\end{itemize}
+									\item <12->Introdução às Imagens
+									\item <13->Iniciando com contêineres
+  				\end{itemize}
   \end{block}
-
-  Also works outside a block:
-  \begin{equation}
-  \sum_{i=1}^n i^2 = \frac{n \times (n+1) \times (2n+1)}{6}
-  \end{equation}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Different type of blocks}
-  \framesubtitle{Weeeee! Colors!!}
-  \begin{block}{Standard block}
+  \frametitle{O que é Docker?}
+  \begin{block}{Definição}
+					Docker é uma plataforma para desenvolvimento, envio e execução de
+					aplicações utilizando virtualização baseada em contêiner.
+					A plataforma \emph{Docker} é composta por algumas ferramentas e
+					produtos, são eles:
   \begin{itemize}
-    \item A standard block, used for grouping
-    \item Obviously can contain itemizes too...
-    \begin{itemize}
-      \item And nested itemizes...
-      \item of course!
-    \end{itemize}
+					\item <2->\emph{Docker Engine}
+					\item <3->\emph{Docker Hub}
+					\item <4->\emph{Docker Machine}
+					\item <5->\emph{Docker Swarm}
+					\item <6->\emph{Docker Compose}
   \end{itemize}
   \end{block}
-  \begin{alertblock}{Alert block}
-  WARNING: Something very important inside this block!
-  \end{alertblock}
-  \begin{example}
-  Note that examples are displayed as a special block...
-  \end{example}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Contêineres vs Máquinas Virtuais}
+  \frametitle{Qual a diferença entre elas?}
+  \begin{block}{Definição}
+					Docker é uma plataforma para desenvolvimento, envio e execução de
+					aplicações utilizando virtualização baseada em contêiner.
+					A plataforma \emph{Docker} é composta por algumas ferramentas e
+					produtos, são eles:
+  \end{block}
 \end{frame}
 
 \section{Fancy features}
-\begin{frame}
-  \frametitle{Highlighting}
-  \framesubtitle{Hey! Look here! here!}
-
-  \begin{block}{A regular block}
-  \begin{itemize}
-    \item Normal text
-    \item \highlighton{Highlighted text} to draw attention
-    \item \alert{"Alert'ed" text} to spot very important information
-    \item Alternatively you can
-    \begin{itemize}
-      \alert{\item "Alert" the item itself}
-      \highlighton{\item Or "Highlight" it}
-    \end{itemize}
-  \end{itemize}
-  \end{block}
-  \begin{alertblock}{If it's very very important...}
-  \alert{... you can "alert" in an "alertblock"}\\
-  Ewww, nasty, heh?
-  \end{alertblock}
-\end{frame}
-
-\newcommand{\putlink}[1]{%
-   \pgfsetlinewidth{1.4pt}%
-   \pgfsetendarrow{\pgfarrowtriangle{4pt}}%
-   \pgfline{\pgfxy(1,1)}{\pgfxy(#1,1)}
-}
-
-\begin{frame}
-  \frametitle{Overlay effects}
-  \framesubtitle{Keep the suspense!}
-  \begin{block}{Time bomb}
-  \begin{enumerate}
-    \item<2-> Two more to go
-    \item<3-> One more to go
-    \item<4-> Last chance...
-    \item<5-> BOOM!
-  \end{enumerate}
-  \end{block}
-  \begin{block}{"Animation"}<6->
-    \begin{pgfpicture}{0cm}{0cm}{7cm}{2cm}
-    \only<1-6>{
-      \putlink{2}
-    }
-    \only<7>{
-      \putlink{4}
-    }
-    \only<8>{
-      \putlink{6}
-    }
-    \only<9>{
-      \putlink{8}
-    }
-    \only<10>{
-      \putlink{10}
-    }
-    \end{pgfpicture}
-  \end{block}
-\end{frame}
 
 \section*{}
 \frame{
