@@ -23,7 +23,7 @@
 
 \begin{document}
 \author{Thiago Almeida
-    	\href{mailto:thiagoalmeidasa@gmail.com}{thiagoalmeidasa@gmail.com}}
+    	\href{mailto:thiagoalmeida@ufpa.br}{thiagoalmeida@ufpa.br}}
 
 \frame{\titlepage}
 
@@ -47,7 +47,6 @@
 
 
 \section{Apresentação}
-
 \begin{frame}
   \frametitle{Pré requisitos e Objetivos}
   \begin{block}{Docker}
@@ -67,15 +66,14 @@
   \begin{itemize}
 		\item Entender a a estrutura da plataforma \emph{Docker}.
 		\item Conhecer os componentes da plataforma \emph{Docker}.
-						\begin{itemize}
-										\item Imagens
-										\item Contêineres
-										\item Repositórios
-						\end{itemize}
+			\begin{itemize}
+				\item Imagens
+				\item Contêineres
+				\item Repositórios
+			\end{itemize}
   \end{itemize}
   \end{block}
 \end{frame}
-
 \section{Introdução}
 \begin{frame}
   \frametitle{Agenda}
@@ -98,10 +96,6 @@
 					\item Registro
 					\pause
 					\item Repositórios
-					\pause
-					\item Docker Hub
-					\pause
-					\item Ferramentas de orquestração Docker
 					\pause
 				\end{itemize}
 			\item Introdução às Imagens
@@ -147,10 +141,15 @@
   \begin{block}{Problemas que isso causava}
 	\begin{itemize}
 		\item Gastava muito tempo no \emph{deploy}
+		\pause
 		\item Alto custo
+		\pause
 		\item Desperdício de recursos
+		\pause
 		\item Difícil para escalar
+		\pause
 		\item Difícil para migrar
+		\pause
 		\item Dependência do fabricante
 	\end{itemize}
   \end{block}
@@ -161,6 +160,7 @@
 	\begin{block}{Virtualização baseada em \emph{Hypervisor}}
 	\begin{itemize}
 		\item Um servidor físico pode conter várias aplicações
+		\pause
 		\item Cada aplicação roda em uma máquina virtual (\emph{VM})
 		\begin{figure}[!h]
 			\centering
@@ -266,7 +266,6 @@
 		\end{figure}
 	\end{block}
 \end{frame}
-
 \section{Docker, conceitos e termos}
 \begin{frame}
   \frametitle{Docker Engine}
@@ -324,92 +323,19 @@
 	\end{block}
 \end{frame}
 \begin{frame}
-  \frametitle{Docker Contêineres e Imagens}
-	\begin{block}{Imagens}
+  \frametitle{Docker Registro e Repositório}
+	\begin{block}{Registro}
 		\begin{itemize}
-			\item \emph{Template} somente leitura utilizado para criar contêineres
+			\item Registro é onde nós armazenamos as nossas imagens.
 			\pause
-			\item Feita por você mesmo ou outro usuários Docker
-			\pause
-			\item Armazenada no \emph{Docker Hub} ou no seu \emph{Registro local}
-			\pause
+			\item Podemos ter o nosso próprio Registro ou utilizar Registros públicos
+							como o \emph{Docker Hub}
 		\end{itemize}
 	\end{block}
-	\begin{block}{Contêineres}
+	\begin{block}{Repositórios}
 		\begin{itemize}
-			\item Plataforma isolada para a aplicação
-			\pause
-			\item Contém tudo que precisa para executar a aplicação
-			\pause
-			\item Baseado em uma ou mais imagens
-			\pause
+			\item Dentro do Registro nós temos os Repositórios
 		\end{itemize}
 	\end{block}
 \end{frame}
-\section{Fancy features}
-
-\section*{}
-\frame{
-  \vfill
-  \centering
-  \highlighton{
-  \usebeamerfont*{frametitle}And now?
-
-  \usebeamerfont*{framesubtitle}Enter the secret section
-  }
-  \vfill
-}
-\begin{frame}
-  \frametitle{Contributing to this beamer style}
-  \framesubtitle{We want you !}
-
-  \begin{block}{Why?}
-  \begin{itemize}
-    \item Beamer is hot!
-    \item This style deserves to be improved
-  \end{itemize}
-  \end{block}
-
-  \begin{block}{How?}
-  \begin{itemize}
-    \item Grab it
-    \item Improve its LaTeX code
-    \item Use you artistics skills
-    \item Document it
-    \item Help other people to use it
-    \item Use it...
-  \end{itemize}
-  \end{block}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Resources}
-  \framesubtitle{If you want to improve this style}
-  \begin{thebibliography}{10}
-
-  \beamertemplatearticlebibitems
-
-  \bibitem{beamer-homepage}
-    LaTeX Beamer
-    \newblock {\tt http://latex-beamer.sourceforge.net/}
-
-  \bibitem{kdeslides}
-    KDE Presentations
-    \newblock {\tt http://www.kde.org/kdeslides/}
-
-  \end{thebibliography}
-\end{frame}
-
-\frame{
-  \vspace{2cm}
-  {\huge Questions ?}
-
-  \vspace{3cm}
-  \begin{flushright}
-    Konqi Konqueror
-
-    \structure{\footnotesize{konqi@kde.org}}
-  \end{flushright}
-}
-
 \end{document}
