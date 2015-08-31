@@ -7,6 +7,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
 \usepackage{verbatim}
+\usepackage{lmodern}
 
 \pdfinfo
 {
@@ -25,30 +26,6 @@
     	\href{mailto:thiagoalmeidasa@gmail.com}{thiagoalmeidasa@gmail.com}}
 
 \frame{\titlepage}
-
-%\section*{}
-%\begin{frame}
-%  \frametitle{Outline}
-%  \tableofcontents[section=1,hidesubsections]
-%\end{frame}
-%
-%\AtBeginSection[]
-%{
-%  \frame<handout:0>
-%  {
-%    \frametitle{Outline}
-%    \tableofcontents[currentsection,hideallsubsections]
-%  }
-%}
-%
-%\AtBeginSubsection[]
-%{
-%  \frame<handout:0>
-%  {
-%    \frametitle{Outline}
-%    \tableofcontents[sectionstyle=show/hide,subsectionstyle=show/shaded/hide]
-%  }
-%}
 
 \newcommand<>{\highlighton}[1]{%
   \alt#2{\structure{#1}}{{#1}}
@@ -106,7 +83,7 @@
   \begin{block}{Principais pontos}
 					\begin{itemize}
 									\item <2->O que é Docker?
-									\item <3->Contêineres vs Máquinas Virituais
+									\item <3->Contêineres vs Máquinas Virtuais
 									\item <4->Visualização sobre a plataforma Docker
 													\begin{itemize}
 																	\item <5->Docker Engine
@@ -143,7 +120,7 @@
 \begin{frame}
   \frametitle{Contêineres vs Máquinas Virtuais}
   \frametitle{Qual a diferença entre elas?}
-  \begin{block}{Definição}
+  \begin{block}{Um pouco de história}
 					Docker é uma plataforma para desenvolvimento, envio e execução de
 					aplicações utilizando virtualização baseada em contêiner.
 					A plataforma \emph{Docker} é composta por algumas ferramentas e
