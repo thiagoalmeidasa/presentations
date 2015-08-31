@@ -57,14 +57,14 @@
 
 	\begin{block}{\emph{LINUX}}
   \begin{itemize}
-		\item Familiariadade com alguma distribuição \emph{Linux}
-		\item Familiariadade com terminal e linhas de comando.
+		\item Familiaridade com alguma distribuição \emph{Linux}
+		\item Familiaridade com terminal e linhas de comando.
   \end{itemize}
   \end{block}
 
   \begin{block}{Objetivos}
   \begin{itemize}
-		\item Entender a a estrutura da plataforma \emph{Docker}.
+		\item Entender a estrutura da plataforma \emph{Docker}.
 		\item Conhecer os componentes da plataforma \emph{Docker}.
 			\begin{itemize}
 				\item Imagens
@@ -271,6 +271,7 @@
   \frametitle{Docker Engine}
 	\begin{block}{O que é?}
 		\begin{itemize}
+			\pause
 			\item \emph{Docker Engine} é o programa que possibilita os
 										contêineres serem feitos, enviados e executados.
 			\pause
@@ -279,7 +280,6 @@
 			\pause
 			\item \emph{Namespaces} nos permitem isolar os contêineres nos seus
 							próprios ambientes.
-			\pause
 		\end{itemize}
 	\end{block}
 \end{frame}
@@ -295,7 +295,6 @@
 			\pause
 			\item Cliente e \emph{Daemon} podem rodar no mesmo \emph{host} ou em
 							\emph{hosts} diferentes.
-			\pause
 		\end{itemize}
 	\end{block}
 \end{frame}
@@ -318,7 +317,6 @@
 			\item Contém tudo que precisa para executar a aplicação
 			\pause
 			\item Baseado em uma ou mais imagens
-			\pause
 		\end{itemize}
 	\end{block}
 \end{frame}
@@ -326,6 +324,7 @@
   \frametitle{Docker Registro e Repositório}
 	\begin{block}{Registro}
 		\begin{itemize}
+			\pause
 			\item Registro é onde nós armazenamos as nossas imagens.
 			\pause
 			\item Podemos ter o nosso próprio Registro ou utilizar Registros públicos
@@ -334,8 +333,18 @@
 	\end{block}
 	\begin{block}{Repositórios}
 		\begin{itemize}
+			\pause
 			\item Dentro do Registro nós temos os Repositórios
 		\end{itemize}
+	\end{block}
+\end{frame}
+\begin{frame}
+  \frametitle{Docker Registro e Repositório}
+	\begin{block}{Registro}
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[width=0.6\paperwidth]{registrorepo}
+		\end{figure}
 	\end{block}
 \end{frame}
 \end{document}
